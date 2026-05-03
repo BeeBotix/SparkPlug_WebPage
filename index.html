@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spark Plug — BeeBotix Product Lineup</title>
+
+  <meta name="description" content="Spark Plug by BeeBotix — a curated lineup of smart kiosk products. PB01 Photo Booth and PP01 Printing Point. Capture moments, print documents, and experience the future of self-service technology." />
+  <meta name="keywords" content="BeeBotix, Spark Plug, photo booth kiosk, document printing kiosk, PB01, PP01, self-service kiosk, photo printing, document kiosk India" />
+  <meta name="author" content="BeeBotix Autonomous Systems" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="Spark Plug — BeeBotix Smart Kiosk Lineup" />
+  <meta property="og:description" content="Photo Booth V01 and Printing Point V01 — designed for people, built for scale." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="heroimg1.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spark Plug — BeeBotix" />
+  <meta name="twitter:description" content="Smart self-service kiosks. Photo booths. Document printing. Built by BeeBotix." />
+  <link rel="canonical" href="https://beebotix.com/spark-plug" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --mid-gray: #c8c4bc;
+      --text-muted: #8a8480;
+      --text-body: #3a3530;
+      --text-dark: #1a1714;
+      --accent-gold: #f5b800;
+      --border: rgba(0,0,0,0.08);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text-body);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ========== NAV ========== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5vw;
+      height: 64px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+
+    .nav-brand { display: flex; flex-direction: column; line-height: 1.2; }
+    .nav-brand .brand-name {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+    .nav-brand .brand-sub {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-body);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-dark); }
+    .nav-cta {
+      background: var(--text-dark) !important;
+      color: var(--white) !important;
+      padding: 0.45rem 1.1rem !important;
+      border-radius: 4px;
+    }
+    .nav-cta:hover { background: #333 !important; }
+
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--text-dark); border-radius: 2px; transition: 0.3s; }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px; left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 5vw;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 199;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-body);
+      text-decoration: none;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ========== HERO SLIDER ========== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      padding-top: 64px;
+    }
+
+    .hero-track {
+      display: flex;
+      width: 200%;
+      height: 100%;
+      transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    .hero-slide {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .hero-slide img.hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.06);
+      transition: transform 8s ease;
+    }
+    .hero-slide.active img.hero-bg { transform: scale(1); }
+
+    .hero-slide .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0.05) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 5rem 8vw;
+    }
+
+    .hero-content { max-width: 600px; }
+
+    .hero-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s 0.3s, transform 0.6s 0.3s;
+    }
+    .hero-slide.active .hero-tag { opacity: 1; transform: translateY(0); }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5.5vw, 5rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s 0.45s, transform 0.7s 0.45s;
+    }
+    .hero-slide.active .hero-title { opacity: 1; transform: translateY(0); }
+
+    .hero-sub {
+      font-size: clamp(0.88rem, 1.2vw, 1rem);
+      color: rgba(255,255,255,0.72);
+      font-weight: 300;
+      max-width: 40ch;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s 0.6s, transform 0.6s 0.6s;
+    }
+    .hero-slide.active .hero-sub { opacity: 1; transform: translateY(0); }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--text-dark);
+      background: var(--white);
+      border: none;
+      padding: 0.75rem 1.6rem;
+      border-radius: 3px;
+      text-decoration: none;
+      width: fit-content;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s 0.75s, transform 0.5s 0.75s, background 0.2s, gap 0.2s;
+    }
+    .hero-slide.active .hero-btn { opacity: 1; transform: translateY(0); }
+    .hero-btn:hover { background: var(--accent-gold); gap: 0.9rem; }
+    .hero-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+    .hero-dots {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.6rem;
+      z-index: 10;
+    }
+    .hero-dot {
+      width: 28px; height: 3px;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.35);
+      cursor: pointer;
+      transition: background 0.3s, width 0.3s;
+      border: none; padding: 0;
+    }
+    .hero-dot.active { background: var(--accent-gold); width: 48px; }
+
+    .hero-arrows {
+      position: absolute;
+      bottom: 2rem;
+      right: 5vw;
+      display: flex;
+      gap: 0.6rem;
+      z-index: 10;
+    }
+    .hero-arrow {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(6px);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .hero-arrow:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.7); }
+    .hero-arrow svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2; }
+
+    .hero-counter {
+      position: absolute;
+      top: calc(64px + 2rem);
+      right: 5vw;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5);
+      z-index: 10;
+    }
+    .hero-counter span { color: rgba(255,255,255,0.9); }
+
+    .hero-progress {
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 3px;
+      background: var(--accent-gold);
+      z-index: 10;
+      width: 0%;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    /* ========== INTRO ========== */
+    .intro {
+      padding: 7rem 5vw 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .intro-left h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+    .intro-left h2 em { font-style: italic; color: var(--text-muted); }
+    .intro-right p { font-size: 1.05rem; color: var(--text-body); font-weight: 300; line-height: 1.75; margin-bottom: 1rem; }
+    .intro-stats { display: flex; gap: 2.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
+    .stat-item { border-left: 2px solid var(--accent-gold); padding-left: 1rem; }
+    .stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--text-dark); line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; }
+
+    /* ========== PRODUCTS ========== */
+    .products { padding: 2rem 0 2rem; }
+
+    .products-header {
+      text-align: center;
+      padding: 0 5vw 5rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .products-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 900;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .products-header p { font-size: 1rem; color: var(--text-muted); font-weight: 300; }
+
+    /* ---- 3D BREAKOUT CARD ---- */
+    /*
+      Strategy: card has overflow:visible so the product image
+      can physically escape the box boundary upward.
+      A separate absolutely-positioned bg panel creates the
+      tinted background region without clipping the image.
+    */
+    .product-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 560px;
+      margin: 0 5vw 10rem;
+      overflow: visible;
+    }
+
+    /* tinted bg — absolutely positioned, does NOT clip children */
+    .product-bg-panel {
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      background: var(--off-white);
+      z-index: 0;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.06);
+    }
+
+    /* info side */
+    .product-info {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 2.5rem 4rem 4rem;
+    }
+    .product-card.reverse .product-info {
+      padding: 4rem 4rem 4rem 2.5rem;
+      order: 2;
+    }
+
+    /* visual side — overflow:visible so image breaks out of card */
+    .product-visual {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: visible;
+      padding: 0;
+    }
+    .product-card.reverse .product-visual { order: 1; }
+
+    /* The hero image breaks OUT of the card — floats above the top edge */
+    .product-visual img {
+      display: block;
+      position: relative;
+      /* taller than the card height so it overflows top and bottom */
+      height: 120%;
+      max-height: 720px;
+      width: auto;
+      object-fit: contain;
+      /* shift up: pulls image above the card's top boundary */
+      margin-bottom: -3rem;
+      margin-top: calc(-20% - 2rem);
+      /* rich shadow that reads like 3D depth */
+      filter:
+        drop-shadow(-8px 0 32px rgba(0,0,0,0.08))
+        drop-shadow(0 24px 48px rgba(0,0,0,0.16))
+        drop-shadow(0 4px 8px rgba(0,0,0,0.06));
+      transition:
+        transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        filter 0.65s;
+    }
+    .product-card:hover .product-visual img {
+      transform: translateY(-12px) scale(1.025);
+      filter:
+        drop-shadow(-10px 0 40px rgba(0,0,0,0.10))
+        drop-shadow(0 32px 64px rgba(0,0,0,0.20))
+        drop-shadow(0 6px 12px rgba(0,0,0,0.08));
+    }
+
+    /* faint ghost model label on bg panel */
+    .product-visual::before {
+      content: attr(data-model);
+      position: absolute;
+      bottom: 1.5rem;
+      right: 2rem;
+      font-family: var(--font-mono);
+      font-size: 5rem;
+      font-weight: 500;
+      color: rgba(0,0,0,0.05);
+      letter-spacing: -0.04em;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .product-id {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 0.8rem;
+    }
+    .product-name {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 2.8vw, 2.8rem);
+      font-weight: 900;
+      color: var(--text-dark);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+    .product-tagline {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+      font-style: italic;
+    }
+    .product-desc {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 1.8rem;
+      max-width: 44ch;
+    }
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 1.8rem;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+      color: var(--text-body);
+    }
+    .feature-list li::before {
+      content: '';
+      display: block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      margin-top: 0.46em;
+      flex-shrink: 0;
+    }
+    .feature-list li strong { color: var(--text-dark); font-weight: 500; }
+
+    .spec-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.7);
+    }
+    .spec-item { flex: 1; padding: 0.85rem 1rem; border-right: 1px solid var(--border); }
+    .spec-item:last-child { border-right: none; }
+    .spec-key { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem; }
+    .spec-val { font-size: 0.85rem; font-weight: 500; color: var(--text-dark); }
+
+    .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--text-dark);
+      padding-bottom: 2px;
+      width: fit-content;
+      transition: gap 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .product-link:hover { color: var(--accent-gold); border-color: var(--accent-gold); gap: 0.9rem; }
+    .product-link svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+    /* ========== HOW IT WORKS ========== */
+    .how-section { background: var(--off-white); padding: 7rem 5vw; }
+    .how-inner { max-width: 1200px; margin: 0 auto; }
+    .how-header { margin-bottom: 4rem; }
+    .how-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: var(--text-dark); letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .how-header p { color: var(--text-muted); font-weight: 300; max-width: 50ch; }
+    .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .how-product { background: var(--white); border-radius: 12px; padding: 2.5rem; border: 1px solid var(--border); }
+    .how-product-id { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 1rem; }
+    .how-product h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.8rem; }
+    .step-list { display: flex; flex-direction: column; }
+    .step-item { display: flex; gap: 1.2rem; padding-bottom: 1.8rem; }
+    .step-item:last-child { padding-bottom: 0; }
+    .step-left { display: flex; flex-direction: column; align-items: center; }
+    .step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--text-dark); color: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500; flex-shrink: 0; }
+    .step-line { width: 1px; flex: 1; background: var(--border); margin-top: 6px; }
+    .step-item:last-child .step-line { display: none; }
+    .step-content { padding-top: 5px; }
+    .step-content h4 { font-size: 0.88rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .step-content p { font-size: 0.82rem; color: var(--text-muted); font-weight: 300; line-height: 1.6; }
+
+    /* ========== PRIVACY BANNER ========== */
+    .privacy-banner { background: var(--text-dark); color: var(--white); padding: 5rem 5vw; text-align: center; }
+    .privacy-banner h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; line-height: 1.2; margin-bottom: 1rem; }
+    .privacy-banner h2 em { color: var(--accent-gold); font-style: italic; }
+    .privacy-banner p { font-size: 0.95rem; color: rgba(255,255,255,0.6); font-weight: 300; max-width: 55ch; margin: 0 auto; }
+
+    /* ========== CTA ========== */
+    .cta-section { padding: 8rem 5vw; max-width: 900px; margin: 0 auto; text-align: center; }
+    .cta-section h2 { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 900; color: var(--text-dark); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
+    .cta-section p { font-size: 1.05rem; color: var(--text-muted); font-weight: 300; max-width: 50ch; margin: 0 auto 2.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--text-dark); color: var(--white); padding: 0.85rem 2rem; border-radius: 4px; text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.02em; transition: background 0.2s, transform 0.2s; }
+    .btn-primary:hover { background: #333; transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--text-dark); padding: 0.85rem 2rem; border-radius: 4px; border: 1.5px solid var(--text-dark); text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.02em; transition: background 0.2s, transform 0.2s; }
+    .btn-secondary:hover { background: var(--off-white); transform: translateY(-2px); }
+
+    /* ========== FOOTER ========== */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--text-dark); }
+    .footer-brand span { color: var(--text-muted); font-weight: 400; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-dark); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* ========== SCROLL REVEAL ========== */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .product-card,
+      .product-card.reverse {
+        grid-template-columns: 1fr;
+        margin: 0 4vw 7rem;
+      }
+      .product-card.reverse .product-info { order: 2; }
+      .product-card.reverse .product-visual { order: 1; }
+      .product-info,
+      .product-card.reverse .product-info { padding: 3rem 2rem 3rem !important; }
+      .product-visual { min-height: 260px; justify-content: center; }
+      .product-visual img {
+        height: auto;
+        max-height: 340px;
+        width: 55%;
+        margin: -3rem auto 0;
+      }
+      .how-grid { grid-template-columns: 1fr; }
+      .intro { grid-template-columns: 1fr; gap: 2.5rem; padding: 5rem 5vw 4rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-arrows { display: none; }
+      .spec-row { flex-wrap: wrap; }
+      .spec-item { border-right: none; border-bottom: 1px solid var(--border); flex: 1 1 45%; }
+      .spec-item:last-child { border-bottom: none; }
+      .product-visual img { width: 70%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="nav-brand">
+      <span class="brand-name">Spark Plug</span>
+      <span class="brand-sub">Powered by BeeBotix</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#products" onclick="closeMobileMenu()">Products</a>
+    <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+    <a href="#contact" onclick="closeMobileMenu()">Get in Touch</a>
+  </div>
+
+  <!-- HERO SLIDER -->
+  <section class="hero" aria-label="Spark Plug Hero">
+
+    <div class="hero-track" id="hero-track">
+
+      <!-- Slide 1: PB01 -->
+      <div class="hero-slide active">
+        <img class="hero-bg" src="heroimg1.png" alt="PB01 Photo Booth by BeeBotix Spark Plug" />
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <p class="hero-tag">PB01 &mdash; Photo Booth V01</p>
+            <h1 class="hero-title">Capture the<br />Moment.</h1>
+            <p class="hero-sub">Event-grade photo booth with instant 4x6 prints and complete on-device privacy. No app. No account. Just memories.</p>
+            <a href="#pb01" class="hero-btn">
+              Explore PB01
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: PP01 -->
+      <div class="hero-slide">
+        <img class="hero-bg" src="heroimg2.png" alt="PP01 Printing Point by BeeBotix Spark Plug" />
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <p class="hero-tag">PP01 &mdash; Printing Point V01</p>
+            <h1 class="hero-title">Print on<br />Demand.</h1>
+            <p class="hero-sub">Secure document printing kiosk with OTP authentication, remote upload, and instant A4 output anywhere you need it.</p>
+            <a href="#pp01" class="hero-btn">
+              Explore PP01
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="hero-dots" role="tablist">
+      <button class="hero-dot active" data-index="0" aria-label="Slide 1" role="tab"></button>
+      <button class="hero-dot" data-index="1" aria-label="Slide 2" role="tab"></button>
+    </div>
+
+    <!-- Arrows -->
+    <div class="hero-arrows">
+      <button class="hero-arrow" id="arrow-prev" aria-label="Previous">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="hero-arrow" id="arrow-next" aria-label="Next">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- Counter -->
+    <div class="hero-counter"><span id="slide-current">01</span> / 02</div>
+
+    <!-- Progress -->
+    <div class="hero-progress" id="hero-progress"></div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro" aria-label="About Spark Plug">
+    <div class="intro-left reveal">
+      <p class="section-label">The Lineup</p>
+      <h2>Smart kiosks.<br /><em>Simpler lives.</em></h2>
+    </div>
+    <div class="intro-right reveal reveal-delay-1">
+      <p>Spark Plug is BeeBotix's debut product line — purpose-built kiosk machines that bring self-service technology to everyday spaces. Each device is designed with a clear job, a reliable workflow, and people-first privacy principles.</p>
+      <p>Built for colleges, offices, malls, and co-working spaces. Engineered for reliability. Designed to be noticed.</p>
+      <div class="intro-stats">
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num">4x6</div>
+          <div class="stat-label">Photo Print</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num">A4</div>
+          <div class="stat-label">Document Size</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-num">OTP</div>
+          <div class="stat-label">Secure Auth</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products" aria-label="Product Lineup">
+    <div class="products-header reveal">
+      <p class="section-label">Product Lineup</p>
+      <h2>Two products.<br />One mission.</h2>
+      <p>Each machine is purpose-built. No bloat, no compromise. Just the right tool for the job.</p>
+    </div>
+
+    <!-- PB01 -->
+    <div class="product-card" id="pb01" aria-label="Photo Booth V01">
+      <div class="product-bg-panel"></div>
+      <div class="product-info">
+        <p class="product-id reveal">PB01 &mdash; Version 01</p>
+        <h2 class="product-name reveal reveal-delay-1">Photo Booth<br />V01</h2>
+        <p class="product-tagline reveal reveal-delay-1">Your moments. Instantly printed. Privately kept.</p>
+        <p class="product-desc reveal reveal-delay-2">
+          PB01 is a standalone photo booth kiosk engineered for events and high-traffic venues. Step in front of the lens, choose your frame, and walk away with a studio-quality 4x6 print in seconds. Every image is processed on-device and automatically erased after printing.
+        </p>
+        <ul class="feature-list reveal reveal-delay-2">
+          <li><span><strong>4x6 inch prints</strong> — high-quality dye-sublimation output with vivid color</span></li>
+          <li><span><strong>Frame selection</strong> — themed borders and layouts selectable per event</span></li>
+          <li><span><strong>Auto local deletion</strong> — all captured images wiped from storage post-print</span></li>
+          <li><span><strong>Touch-driven workflow</strong> — intuitive on-screen UI, no app or account required</span></li>
+          <li><span><strong>Premium wood-finish enclosure</strong> — compact footprint, event-ready design</span></li>
+        </ul>
+        <div class="spec-row reveal reveal-delay-3">
+          <div class="spec-item">
+            <div class="spec-key">Print Size</div>
+            <div class="spec-val">4 x 6 in</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-key">Privacy</div>
+            <div class="spec-val">Auto-delete</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-key">Input</div>
+            <div class="spec-val">Touch UI</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-key">Model</div>
+            <div class="spec-val">PB01</div>
+          </div>
+        </div>
+        <a href="#contact" class="product-link reveal reveal-delay-3">
+          Inquire about PB01
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="product-visual" data-model="PB01">
+        <img src="PB01.png" alt="PB01 Photo Booth Kiosk by BeeBotix Spark Plug" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- PP01 -->
+    <div class="product-card reverse" id="pp01" aria-label="Printing Point V01">
+      <div class="product-bg-panel"></div>
+      <div class="product-visual" data-model="PP01">
+        <img src="PP01.png" alt="PP01 Printing Point Kiosk by BeeBotix Spark Plug" loading="lazy" />
+      </div>
+      <div class="product-info">
+        <p class="product-id reveal">PP01 &mdash; Version 01</p>
+        <h2 class="product-name reveal reveal-delay-1">Printing<br />Point V01</h2>
+        <p class="product-tagline reveal reveal-delay-1">Upload. Verify. Print. Done.</p>
+        <p class="product-desc reveal reveal-delay-2">
+          PP01 is a document printing kiosk built for offices, campuses, and public spaces. Upload remotely, confirm specs, pay, receive an OTP. Walk up to the machine, enter the code — it greets you by name — and printing begins immediately.
+        </p>
+        <ul class="feature-list reveal reveal-delay-2">
+          <li><span><strong>Remote upload</strong> — send documents from any internet-connected device to the machine</span></li>
+          <li><span><strong>OTP authentication</strong> — one-time password tied to your job; machine shows your name</span></li>
+          <li><span><strong>Specification preview</strong> — review page count, paper size, and cost before paying</span></li>
+          <li><span><strong>A4 format</strong> — optimized for standard document sizes; black-and-white in V01</span></li>
+          <li><span><strong>Integrated payment</strong> — pay directly at the kiosk before print is released</span></li>
+        </ul>
+        <div class="spec-row reveal reveal-delay-3">
+          <div class="spec-item">
+            <div class="spec-key">Paper Size</div>
+            <div class="spec-val">A4</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-key">Output</div>
+            <div class="spec-val">B&amp;W</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-key">Auth</div>
+            <div class="spec-val">OTP</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-key">Model</div>
+            <div class="spec-val">PP01</div>
+          </div>
+        </div>
+        <a href="#contact" class="product-link reveal reveal-delay-3">
+          Inquire about PP01
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how-it-works" aria-label="How It Works">
+    <div class="how-inner">
+      <div class="how-header reveal">
+        <p class="section-label">Workflow</p>
+        <h2>How it works</h2>
+        <p>Both machines follow a clear, minimal flow. No accounts needed, no friction.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-product reveal reveal-delay-1">
+          <p class="how-product-id">PB01 &mdash; Photo Booth</p>
+          <h3>From pose to print</h3>
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-left"><div class="step-num">01</div><div class="step-line"></div></div>
+              <div class="step-content"><h4>Select a frame</h4><p>Browse themed borders and layout options on the touchscreen.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-left"><div class="step-num">02</div><div class="step-line"></div></div>
+              <div class="step-content"><h4>Strike a pose</h4><p>The camera counts down. Capture up to four shots in a session.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-left"><div class="step-num">03</div><div class="step-line"></div></div>
+              <div class="step-content"><h4>Preview and confirm</h4><p>See a preview of your composition before sending to print.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-left"><div class="step-num">04</div><div class="step-line"></div></div>
+              <div class="step-content"><h4>Collect your print</h4><p>A 4x6 print comes out in seconds. Image is automatically deleted.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="how-product reveal reveal-delay-2">
+          <p class="how-product-id">PP01 &mdash; Printing Point</p>
+          <h3>From upload to output</h3>
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-left"><div class="step-num">01</div><div class="step-line"></div></div>
+              <div class="step-content"><h4>Upload your document</h4><p>Send your file over the internet from any device, or scan locally.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-left"><div class="step-num">02</div><div class="step-line"></div></div>
+              <div class="step-content"><h4>Review specifications</h4><p>Check page count, paper size, and cost before proceeding.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-left"><div class="step-num">03</div><div class="step-line"></div></div>
+              <div class="step-content"><h4>Complete payment</h4><p>Pay at the kiosk. A unique OTP is sent to your registered contact.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-left"><div class="step-num">04</div><div class="step-line"></div></div>
+              <div class="step-content"><h4>Enter OTP and print</h4><p>Your name appears on screen to confirm identity. Printing starts.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY BANNER -->
+  <div class="privacy-banner" aria-label="Privacy Statement">
+    <p class="section-label" style="color:rgba(255,255,255,0.4);">Built-in</p>
+    <h2>Privacy is not a feature.<br /><em>It is the default.</em></h2>
+    <p>Every image captured by PB01 is erased automatically after printing. No cloud uploads, no stored faces, no data trail. What you print stays yours.</p>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact" aria-label="Contact">
+    <p class="section-label">Spark Plug by BeeBotix</p>
+    <h2>Ready to bring a kiosk to your space?</h2>
+    <p>Whether you are running an event venue, a college campus, or a coworking space, we would love to talk about deploying Spark Plug.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@beebotix.com" class="btn-primary">Contact BeeBotix</a>
+      <a href="#products" class="btn-secondary">Back to Products</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">Spark Plug <span>Powered by BeeBotix &mdash; Autonomous Systems</span></div>
+    <ul class="footer-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 BeeBotix Autonomous Systems. All rights reserved.</p>
+  </footer>
+
+  <script>
+    /* ---- NAV ---- */
+    var nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    /* ---- MOBILE MENU ---- */
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    });
+    function closeMobileMenu() {
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+
+    /* ---- HERO SLIDER ---- */
+    var slides = document.querySelectorAll('.hero-slide');
+    var dots = document.querySelectorAll('.hero-dot');
+    var track = document.getElementById('hero-track');
+    var progressBar = document.getElementById('hero-progress');
+    var slideCurrentEl = document.getElementById('slide-current');
+    var total = slides.length;
+    var current = 0;
+    var autoTimer = null;
+    var DURATION = 5500;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + total) % total;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      track.style.transform = 'translateX(-' + (current * 50) + '%)';
+      slideCurrentEl.textContent = (current + 1).toString().padStart(2, '0');
+      animateProgress();
+    }
+
+    function animateProgress() {
+      progressBar.style.transition = 'none';
+      progressBar.style.width = '0%';
+      void progressBar.offsetWidth;
+      progressBar.style.transition = 'width ' + DURATION + 'ms linear';
+      progressBar.style.width = '100%';
+    }
+
+    function startAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(function() { goTo(current + 1); }, DURATION);
+    }
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        goTo(parseInt(dot.getAttribute('data-index')));
+        startAuto();
+      });
+    });
+
+    document.getElementById('arrow-prev').addEventListener('click', function() { goTo(current - 1); startAuto(); });
+    document.getElementById('arrow-next').addEventListener('click', function() { goTo(current + 1); startAuto(); });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') { goTo(current - 1); startAuto(); }
+      if (e.key === 'ArrowRight') { goTo(current + 1); startAuto(); }
+    });
+
+    var heroEl = document.querySelector('.hero');
+    heroEl.addEventListener('mouseenter', function() { clearInterval(autoTimer); progressBar.style.transition = 'none'; });
+    heroEl.addEventListener('mouseleave', function() { animateProgress(); startAuto(); });
+
+    animateProgress();
+    startAuto();
+
+    /* ---- SCROLL REVEAL ---- */
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+  </script>
+
+</body>
+</html>
